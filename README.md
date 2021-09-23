@@ -1,6 +1,6 @@
 A Django Project
 
-get MERCHANT KEY and MID from paytm and update it in shop/views.py before running the project.
+get MERCHANT KEY and MID from paytm and update it in shop/views.py before running the project
 
 Admin:
 	Username: nikhilhooda
