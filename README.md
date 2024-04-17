@@ -1,81 +1,72 @@
-A Django Project
+# InstantBooks - Online Bookstore
 
-get MERCHANT KEY and MID from paytm and update it in shop/views.py before running the project
+InstantBooks is an online bookstore project built using Django framework. It allows users to browse through a collection of books, make purchases, and interact with an admin panel for managing products.
 
-Admin:
+## Setup
 
-	Username: nikhilhooda
-	Password: nikhil123 
+1. **Get Paytm Merchant Key and MID**: Obtain MERCHANT KEY and MID from Paytm and update it in `shop/views.py` before running the project.
 
-Users:
+2. **Admin Credentials**:
+   - Username: nikhilhooda
+   - Password: nikhil123
 
-	Username: user1
-	Password: 1234
-	Username: user2
-	Password: 1234
+3. **User Credentials**:
+   - Username: user1, Password: 1234
+   - Username: user2, Password: 1234
 
+4. **Required Libraries**:
+   - Install Pillow: ``` pip install pillow ```
+   - Install pycryptodome: ``` pip3 install pycryptodome ```
 
-Potential Library Requirments:
+## Payment Details
 
-	pillow(pip install pillow)
+Use the following payment details for testing purposes:
+- Mobile number: 77777 77777
+- Password: Paytm12345
+- OTP: 489871
 
-	pycryptodome(pip3 install pycryptodome)
+Note: Do not attempt to make payments with official Paytm accounts or valid Debit/Credit cards in the development environment.
 
-Use the following payment details for payment:
+## How to Run
 
-	Mobile number: 77777 77777
+1. Open CMD, PowerShell, or Terminal/CommandShell of any IDE.
 
-	Password: Paytm12345
+2. Navigate to the root folder where `manage.py` file is located.
 
-	OTP: 489871
+3. Run command: ``` python manage.py runserver ```
 
-Note: Do not try to make Payment with an official Paytm account or valid Debit/Credit card as of now.
+4. Open any browser and go to `127.0.0.1:8000`.
 
-How to run:
+5. You should see the homepage of InstantBooks.
 
-	1.Open CMD, PowerShell or Terminal/CommandShell of any IDE
+## Access Admin Panel
 
-	2.Go to the root folder where manage.py file is located
+1. Run the server.
 
-	3.Run command "python manage.py runserver"
+2. Open a browser and visit `127.0.0.1:8000/admin`.
 
-	4.Open any browser and go to 127.0.0.1:8000
+3. Log in with the provided admin username and password.
 
-	5.You should be able to see the homepage
+## Adding New Menu Items
 
-View Admin Panel:
+1. Log in as an admin.
 
-	1.Run server
+2. Go to products section.
 
-	2.Open browser and visit 127.0.0.1:8000/admin
+3. Click "Add products" and provide valid details of the new product.
 
-	3.Login with provided username and password
+4. Visit the homepage to confirm the addition of the new product.
 
-Adding new menu items:
+## Changing Admin Password
 
-	1.Login as admin
+1. Navigate to the root folder.
 
-	2.Go to products
+2. Run the following command: ``` python manage.py changepassword <admin_username>. ```
 
-	3.Click Add products and provide valid details of new product
+3. Provide a new password.
 
-	4.To confirm visit homepage and look for added product
+## Important Notes
 
-Changing Admin Password:
-
-	1.Go to root folder
-
-	2.Run following command "python manage.py changepassword <user_name>"
-
-	3.Provide new password
-
-Points to keep in mind
-
-The payment gateway is for development purposes and must not be used for real-world payment as of now. Payment failure occurs very often in the development environment, to 
-succeed, make sure you fill all required fields and try again till it does. for any query contact the writer.
-
-By Nikhil Hooda
-
-Email:
-
-nikhilhooda35@gmail.com
+- The payment gateway is for development purposes only and should not be used for real-world transactions.
+- Payment failures may occur frequently in the development environment. Ensure all required fields are filled and retry if necessary.
+- For any queries, contact the project writer.
